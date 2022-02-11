@@ -1,0 +1,192 @@
+[2022-02-10T21:55:24.024Z] [org.springframework.boot.StartupInfoLogger] [main] [[32m[0;39m] [50] [INFO ] Starting ApiDemoApplication on Lakshita-Raichura with PID 4148 (started by Lakshita in D:\AXA CODING CHALLENGE\java-challenge\alj-java-challenge-master\alj-java-challenge-master)
+[2022-02-10T21:55:24.024Z] [org.springframework.boot.StartupInfoLogger] [main] [[32m[0;39m] [53] [DEBUG] Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+[2022-02-10T21:55:24.024Z] [org.springframework.boot.SpringApplication] [main] [[32m[0;39m] [679] [INFO ] The following profiles are active: default
+[2022-02-10T21:55:27.027Z] [org.apache.juli.logging.DirectJDKLog] [main] [[32m[0;39m] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8181"]
+[2022-02-10T21:55:27.027Z] [org.apache.juli.logging.DirectJDKLog] [main] [[32m[0;39m] [173] [INFO ] Starting service [Tomcat]
+[2022-02-10T21:55:27.027Z] [org.apache.juli.logging.DirectJDKLog] [main] [[32m[0;39m] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/9.0.17]
+[2022-02-10T21:55:27.027Z] [org.apache.juli.logging.DirectJDKLog] [main] [[32m[0;39m] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2022-02-10T21:55:27.027Z] [org.springframework.boot.web.embedded.tomcat.TomcatStarter] [main] [[32m[0;39m] [62] [ERROR] Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/HazelcastCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+[2022-02-10T21:55:27.027Z] [org.apache.juli.logging.DirectJDKLog] [main] [[32m[0;39m] [173] [INFO ] Stopping service [Tomcat]
+[2022-02-10T21:55:27.027Z] [org.springframework.boot.SpringApplication] [main] [[32m[0;39m] [858] [ERROR] Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:157)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at jp.co.axa.apidemo.ApiDemoApplication.main(ApiDemoApplication.java:20)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:125)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:427)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:154)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/HazelcastCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:235)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:226)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:101)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:88)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:54)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5139)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1367)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:902)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:831)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1367)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:902)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:423)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:928)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:455)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:106)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/HazelcastCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cachesEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/cache/CachesEndpointAutoConfiguration.class]: Unsatisfied dependency expressed through method 'cachesEndpoint' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/HazelcastCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBean(EndpointDiscoverer.java:149)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBeans(EndpointDiscoverer.java:136)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.discoverEndpoints(EndpointDiscoverer.java:125)
+	at org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.getEndpoints(EndpointDiscoverer.java:119)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.servletEndpointRegistrar(ServletEndpointManagementContextConfiguration.java:76)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$ba50bc96.CGLIB$servletEndpointRegistrar$0(<generated>)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$ba50bc96$$FastClassBySpringCGLIB$$26c5587b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration$$EnhancerBySpringCGLIB$$ba50bc96.servletEndpointRegistrar(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/HazelcastCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1463)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1427)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1346)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 79 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hazelcastInstance' defined in class path resource [org/springframework/boot/autoconfigure/hazelcast/HazelcastServerConfiguration$HazelcastServerConfigConfiguration.class]: Unsatisfied dependency expressed through method 'hazelcastInstance' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 96 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getHazelcastConfig' defined in class path resource [jp/co/axa/apidemo/configs/HazelcastCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 110 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hazelcast.config.Config]: Factory method 'getHazelcastConfig' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 124 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type Config
+
+	at jp.co.axa.apidemo.configs.HazelcastCacheConfiguration.getHazelcastConfig(HazelcastCacheConfiguration.java:34)
+	at jp.co.axa.apidemo.configs.HazelcastCacheConfiguration$$EnhancerBySpringCGLIB$$53287fef.CGLIB$getHazelcastConfig$0(<generated>)
+	at jp.co.axa.apidemo.configs.HazelcastCacheConfiguration$$EnhancerBySpringCGLIB$$53287fef$$FastClassBySpringCGLIB$$3eed007e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at jp.co.axa.apidemo.configs.HazelcastCacheConfiguration$$EnhancerBySpringCGLIB$$53287fef.getHazelcastConfig(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 125 common frames omitted

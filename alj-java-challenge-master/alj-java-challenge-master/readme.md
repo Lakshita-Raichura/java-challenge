@@ -43,10 +43,36 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 - Is the application running as expected
 - No performance issues
 
-#### Your experience in Java
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
-Please let us know more about your Java experience in a few sentences. For example:
+#### Your experience in Java(Edited)
+- I have 4.5 years of overall experience and 3 years of experience in JAPAN.
+- I have 2.5 years experience in Java and I started to use Spring Boot from last year
+- I have started learning Spring Boot last year and currently planning to lear nodeJs and reactJs. 
+- Also in future I am interested in learning cloud technologies like AWS and want to work on one of the cloud services.
 
-- I have 3 years experience in Java and I started to use Spring Boot from last year
-- I'm a beginner and just recently learned Spring Boot
-- I know Spring Boot very well and have been using it for many years
+
+####  Features Included in Employee CRUD Service*
+
+- Rest Controller for Employee Service.
+- Employee service class and its implementation.
+- Spring security to protect rest endpoints.
+- Caching layer for enabling caching for this Service using Hazelcast configuration.
+- Swagger configuration for API documentation.
+- WebMVC configuration and Interceptors to enable CorrelationId injection in each request.
+- Custom exception handlers and API responses and Util classes.
+- Actuator framework support for Application health check.
+- Logging using Sl4j framework.
+- JUnits support for implementation and business logic.
+- Profile based configuration file.
+
+
+####  Future enhancement/Scope/TODO's
+
+- Actuator framework customization.
+- Monitoring framework.
+- CI/CD readiness.
+- Integration testing.
+- UI integration.
+- Spring config server.
